@@ -28,7 +28,7 @@ class InstructionsFragment : Fragment() {
         }
     }
 
-    fun goToShoeList(){
+    fun goToShoeList() {
         val action = InstructionsFragmentDirections.actionInstructionsFragmentToShoeListFragment()
         findNavController().navigate(action)
     }

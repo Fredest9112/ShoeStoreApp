@@ -47,7 +47,7 @@ class ShoeListFragment : Fragment() {
         val layout = binding?.shoeListLayout
         //here I based my code on a github repo uploaded by GerdanaT/shoeBox
         //however it is not exactly what she did
-        //https://github.com/GerganaT/ShoeBox/blob/master/app/src/main/java/com/example/android/shoebox/ShoeListFragment.kt
+        //https://github.com/GerganaT/ShoeBox -> ShoeListFragment.kt
         shoeStoreViewModel.shoes.observe(viewLifecycleOwner) {
             it.forEach { shoe ->
                 val shoeItemBinding: ShoeItemBinding =

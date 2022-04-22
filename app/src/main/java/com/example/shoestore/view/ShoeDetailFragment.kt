@@ -33,7 +33,7 @@ class ShoeDetailFragment : Fragment() {
         }
     }
 
-    fun onCancelShoePressed(){
+    fun onCancelShoePressed() {
         binding?.apply {
             shoeNameInput.text.clear()
             shoeCompanyInput.text.clear()
@@ -45,12 +45,14 @@ class ShoeDetailFragment : Fragment() {
         findNavController().navigate(action)
     }
 
-    fun onSaveShoePressed(){
+    fun onSaveShoePressed() {
         binding?.apply {
-            val newShoe = Shoe(shoeNameInput.text.toString(),
-            shoeSizeInput.text.toString().toDouble(),
-            shoeCompanyInput.text.toString(),
-            shoeDescInput.text.toString())
+            val newShoe = Shoe(
+                shoeNameInput.text.toString(),
+                shoeSizeInput.text.toString().toDouble(),
+                shoeCompanyInput.text.toString(),
+                shoeDescInput.text.toString()
+            )
             shoeStoreViewModel.setShoesList(newShoe)
         }
         val action = ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment()

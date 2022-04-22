@@ -5,6 +5,7 @@
     tools:context=".view.ShoeListFragment">
 
     <data>
+
         <variable
             name="shoeListFragment"
             type="com.example.shoestore.view.ShoeListFragment" />

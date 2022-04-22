@@ -18,13 +18,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
         setupActionBarWithNavController(navController)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        if(navController.currentDestination?.id == R.id.shoeListFragment){
+        if (navController.currentDestination?.id == R.id.shoeListFragment) {
             menuInflater.inflate(R.menu.logout_menu, menu)
             menu?.findItem(R.id.loginFragment)?.isVisible = true
         }
@@ -32,11 +33,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item.itemId == R.id.loginFragment){
+        if (item.itemId == R.id.loginFragment) {
             val action = ShoeListFragmentDirections.actionShoeListFragmentToLoginFragment()
             navController.navigate(action)
         }
-        if(item.itemId == android.R.id.home){
+        //here I based my code on a github repo uploaded by GerdanaT/shoeBox
+        //however it is not exactly what she did
+        //https://github.com/GerganaT/ShoeBox -> MainActivity.kt
+        if (item.itemId == android.R.id.home) {
             onBackPressed()
             return true
         }

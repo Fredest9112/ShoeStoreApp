@@ -5,9 +5,11 @@
     tools:context=".view.LoginFragment">
 
     <data>
+
         <variable
             name="loginFragment"
             type="com.example.shoestore.view.LoginFragment" />
+
         <variable
             name="viewModel"
             type="com.example.shoestore.model.ShoeStoreViewModel" />

@@ -13,26 +13,26 @@ class ShoeStoreViewModel : ViewModel() {
     private val _userPass = MutableLiveData<String>()
 
     private val _shoes = MutableLiveData<MutableList<Shoe>>()
-    val shoes : LiveData<MutableList<Shoe>> = _shoes
+    val shoes: LiveData<MutableList<Shoe>> = _shoes
 
     init {
         _shoes.value = mutableListOf()
     }
 
-    fun setUserName(userName : String){
+    fun setUserName(userName: String) {
         _userName.value = userName
     }
 
-    fun setUserPass(userPass : String){
+    fun setUserPass(userPass: String) {
         _userPass.value = userPass
     }
 
-    fun setShoesList(shoe:Shoe){
+    fun setShoesList(shoe: Shoe) {
         _shoes.value?.add(shoe)
         _shoes.value = _shoes.value
     }
 
-    fun isUserLogged():Boolean{
+    fun isUserLogged(): Boolean {
         return _userPass.value?.isNotEmpty() == true && _userName.value?.isNotEmpty() == true
     }
 }

@@ -27,12 +27,13 @@ class WelcomeFragment : Fragment() {
             welcomeFragment = this@WelcomeFragment
         }
     }
+
     override fun onDestroy() {
         super.onDestroy()
         binding = null
     }
 
-    fun goToInstructions(){
+    fun goToInstructions() {
         val action = WelcomeFragmentDirections.actionWelcomeFragmentToInstructionsFragment()
         findNavController().navigate(action)
     }

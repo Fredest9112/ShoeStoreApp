@@ -5,6 +5,7 @@
     tools:context=".view.ShoeDetailFragment">
 
     <data>
+
         <variable
             name="shoeDetailFragment"
             type="com.example.shoestore.view.ShoeDetailFragment" />
@@ -149,8 +150,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:fontFamily="@font/roboto"
-                android:text="@string/btnCancelShoe"
                 android:onClick="@{() -> shoeDetailFragment.onCancelShoePressed()}"
+                android:text="@string/btnCancelShoe"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/btnSaveShoe"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -162,8 +163,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
-                android:text="@string/btnSaveShoe"
                 android:onClick="@{() -> shoeDetailFragment.onSaveShoePressed()}"
+                android:text="@string/btnSaveShoe"
                 app:layout_constraintBottom_toBottomOf="@+id/btnCancelShoe"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"

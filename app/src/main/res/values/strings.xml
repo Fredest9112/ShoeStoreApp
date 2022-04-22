@@ -1,5 +1,47 @@
 <resources>
     <string name="app_name">ShoeStore</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Login Fragment -->
+    <string name="loginTitle">Shoe Store</string>
+    <string name="nameHint">Enter your name</string>
+    <string name="passHint">Enter your password</string>
+    <string name="btnSignIn">sign in</string>
+    <string name="btnSignUp">sign up</string>
+    <string name="error_no_credentials">Check username and password!</string>
+    <!-- Welcome Fragment -->
+    <string name="welcomeTitle">Welcome to ShoeStore</string>
+    <string name="welcomeText"> ShoeStoreApp is an app that has been\n
+                                created with the purpose of reviewing\n
+                                concepts learnt from Udacity platform\n
+                                like LiveData, ViewModel, Navigation\n
+                                component, Databinding, etc, it also\n
+                                includes material design stuff :D!</string>
+    <string name="btnInstructionsScreen">Go to Instructions</string>
+    <!-- Instructions Fragment -->
+    <string name="instructionsTitle">Instructions</string>
+    <string name="instructionsText">In the next screen a list of shoes is \n
+                                    displayed so you can see what is \n
+                                    currently available in the Store.\n
+                                    It also has a button that allow you to add\n
+                                    more shoes to your current inventory.</string>
+    <string name="bntShoeList">go to shoe list</string>
+    <!-- ShoeList Fragment -->
+    <string name="shoeListTitle">Shoe List</string>
+    <string name="shoeListHint">Your shoes will appear down here!</string>
+    <!-- Shoe Item -->
+    <string name="shoeName">Name</string>
+    <string name="shoeSize">Size</string>
+    <string name="shoeCompany">Company</string>
+    <string name="shoeDesc">Description</string>
+    <!-- Shoe Details Fragment -->
+    <string name="shoeDetailTitle">Shoe Details</string>
+    <string name="shoeNameHint">Name of shoe</string>
+    <string name="shoeSizeHint">Size of shoe</string>
+    <string name="shoeCompanyHint">Company</string>
+    <string name="shoeImageHint">Image of shoe</string>
+    <string name="shoeDescHint">Description</string>
+    <string name="btnSaveShoe">save</string>
+    <string name="btnCancelShoe">Cancel</string>
+    <!-- Logout Menu -->
+    <string name="logoutMenu">Logout</string>
+
 </resources>

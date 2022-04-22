@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/shoeName"
+            style="@style/subParagrafStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shoeName"
+            app:layout_constraintStart_toStartOf="@+id/shoeNameLabel"
+            app:layout_constraintTop_toBottomOf="@+id/shoeNameLabel" />
+
+        <TextView
+            android:id="@+id/shoeSize"
+            style="@style/subParagrafStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shoeSize"
+            app:layout_constraintStart_toStartOf="@+id/shoeSizeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/shoeSizeLabel" />
+
+        <TextView
+            android:id="@+id/shoeCompany"
+            style="@style/subParagrafStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shoeCompany"
+            app:layout_constraintStart_toStartOf="@+id/shoeCompanyLabel"
+            app:layout_constraintTop_toBottomOf="@+id/shoeCompanyLabel" />
+
+        <TextView
+            android:id="@+id/shoeDesc"
+            style="@style/subParagrafStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/shoeDesc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/shoeDescLabel"
+            app:layout_constraintTop_toBottomOf="@+id/shoeDescLabel" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/shoeNameLabel"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_image_sample" />
+
+        <TextView
+            android:id="@+id/shoeNameLabel"
+            style="@style/subTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/shoeName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/shoeSizeLabel"
+            style="@style/subTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shoeSize"
+            app:layout_constraintStart_toStartOf="@+id/shoeNameLabel"
+            app:layout_constraintTop_toBottomOf="@+id/shoeName" />
+
+        <TextView
+            android:id="@+id/shoeCompanyLabel"
+            style="@style/subTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shoeCompany"
+            app:layout_constraintStart_toStartOf="@+id/shoeSizeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/shoeSize" />
+
+        <TextView
+            android:id="@+id/shoeDescLabel"
+            style="@style/subTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shoeDesc"
+            app:layout_constraintStart_toStartOf="@+id/shoeCompanyLabel"
+            app:layout_constraintTop_toBottomOf="@+id/shoeCompany" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

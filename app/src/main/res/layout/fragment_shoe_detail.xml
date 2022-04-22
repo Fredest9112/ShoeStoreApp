@@ -4,6 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".view.ShoeDetailFragment">
 
+    <data>
+        <variable
+            name="shoeDetailFragment"
+            type="com.example.shoestore.view.ShoeDetailFragment" />
+    </data>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -14,16 +20,156 @@
 
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/shoeDetailTitle"
+                style="@style/titleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/shoeDetailTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/shoeNameInputLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/shoeSizeInputLabel"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shoeDetailTitle">
+
+                <AutoCompleteTextView
+                    android:id="@+id/shoeNameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/roboto"
+                    android:hint="@string/shoeNameHint"
+                    android:inputType="text"
+                    android:paddingStart="16dp">
+
+                </AutoCompleteTextView>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/shoeSizeInputLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/shoeNameInputLabel"
+                app:layout_constraintTop_toTopOf="@+id/shoeNameInputLabel">
+
+                <AutoCompleteTextView
+                    android:id="@+id/shoeSizeInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/roboto"
+                    android:hint="@string/shoeSizeHint"
+                    android:inputType="number"
+                    android:paddingStart="16dp">
+
+                </AutoCompleteTextView>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/shoeCompanyInputLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/shoeImageInputLabel"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shoeNameInputLabel">
+
+                <AutoCompleteTextView
+                    android:id="@+id/shoeCompanyInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/roboto"
+                    android:hint="@string/shoeCompanyHint"
+                    android:inputType="text"
+                    android:paddingStart="16dp">
+
+                </AutoCompleteTextView>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/shoeImageInputLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/shoeCompanyInputLabel"
+                app:layout_constraintTop_toTopOf="@+id/shoeCompanyInputLabel">
+
+                <AutoCompleteTextView
+                    android:id="@+id/shoeImageInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/roboto"
+                    android:hint="@string/shoeImageHint"
+                    android:inputType="text"
+                    android:paddingStart="16dp">
+
+                </AutoCompleteTextView>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/shoeDescInputLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shoeCompanyInputLabel">
+
+                <AutoCompleteTextView
+                    android:id="@+id/shoeDescInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/roboto"
+                    android:hint="@string/shoeDescHint"
+                    android:inputType="text"
+                    android:paddingStart="16dp">
+
+                </AutoCompleteTextView>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnCancelShoe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:text="TextView"
+                android:fontFamily="@font/roboto"
+                android:text="@string/btnCancelShoe"
+                android:onClick="@{() -> shoeDetailFragment.onCancelShoePressed()}"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnSaveShoe"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/shoeDescInputLabel" />
+
+            <Button
+                android:id="@+id/btnSaveShoe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="@string/btnSaveShoe"
+                android:onClick="@{() -> shoeDetailFragment.onSaveShoePressed()}"
+                app:layout_constraintBottom_toBottomOf="@+id/btnCancelShoe"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnCancelShoe"
+                app:layout_constraintTop_toTopOf="@+id/btnCancelShoe" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>

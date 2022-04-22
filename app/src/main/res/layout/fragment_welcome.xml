@@ -4,6 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".view.WelcomeFragment">
 
+    <data>
+        <variable
+            name="welcomeFragment"
+            type="com.example.shoestore.view.WelcomeFragment" />
+    </data>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -13,16 +19,38 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/welcomeTitle"
+                style="@style/titleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/welcomeTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/welcomeText"
+                android:text="@string/welcomeText"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welcomeTitle"
+                style="@style/paragrafStyle" />
+
+            <Button
+                android:id="@+id/btnInstructionsScreen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:text="TextView"
+                android:fontFamily="@font/roboto"
+                android:text="@string/btnInstructionsScreen"
+                android:onClick="@{() -> welcomeFragment.goToInstructions()}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>

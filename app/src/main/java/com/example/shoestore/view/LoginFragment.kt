@@ -1,15 +1,13 @@
 package com.example.shoestore.view
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.shoestore.R
+import com.example.shoestore.data.ValidateInputs.validateLoginCredentials
 import com.example.shoestore.databinding.FragmentLoginBinding
 import com.example.shoestore.model.ShoeStoreViewModel
 
@@ -39,20 +37,19 @@ class LoginFragment : Fragment() {
     fun goToWelcomeFragment() {
         binding?.apply {
             shoeStoreViewModel.apply {
-                if (nameInput.text.isNotEmpty() && passInput.text.isNotEmpty()) {
+                if (validateLoginCredentials(
+                        nameInput.text.toString(),
+                        passInput.text.toString(),
+                        resources,
+                        activity
+                    )
+                ) {
                     setUserName(nameInput.text.toString())
                     setUserPass(passInput.text.toString())
                     isUserLogged()
                     val action = LoginFragmentDirections.actionLoginFragmentToWelcomeFragment()
                     findNavController().navigate(action)
-                } else {
-                    Toast.makeText(
-                        activity,
-                        resources.getString(R.string.error_no_credentials),
-                        Toast.LENGTH_SHORT
-                    ).show()
                 }
-
             }
         }
     }

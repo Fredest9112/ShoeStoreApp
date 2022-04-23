@@ -1,7 +1,6 @@
 package com.example.shoestore.view
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.shoestore.data.Shoe
+import com.example.shoestore.data.ValidateInputs.validateInput
+import com.example.shoestore.data.ValidateInputs.validateSizeInput
 import com.example.shoestore.databinding.FragmentShoeDetailBinding
 import com.example.shoestore.model.ShoeStoreViewModel
 
@@ -30,6 +31,7 @@ class ShoeDetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding?.apply {
             shoeDetailFragment = this@ShoeDetailFragment
+            shoe = Shoe("","","","")
         }
     }
 
@@ -48,10 +50,10 @@ class ShoeDetailFragment : Fragment() {
     fun onSaveShoePressed() {
         binding?.apply {
             val newShoe = Shoe(
-                shoeNameInput.text.toString(),
-                shoeSizeInput.text.toString().toDouble(),
-                shoeCompanyInput.text.toString(),
-                shoeDescInput.text.toString()
+                validateInput(shoe?.name, resources),
+                validateSizeInput(shoe?.size, resources),
+                validateInput(shoe?.company, resources),
+                validateInput(shoe?.description, resources)
             )
             shoeStoreViewModel.setShoesList(newShoe)
         }

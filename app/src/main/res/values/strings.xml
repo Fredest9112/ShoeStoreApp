@@ -41,6 +41,7 @@
     <string name="shoeDescHint">Description</string>
     <string name="btnSaveShoe">save</string>
     <string name="btnCancelShoe">Cancel</string>
+    <string name="empty">Empty</string>
     <!-- Logout Menu -->
     <string name="logoutMenu">Logout</string>
 

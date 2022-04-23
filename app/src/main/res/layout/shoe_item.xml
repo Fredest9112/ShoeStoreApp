@@ -3,6 +3,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- Constraint Layout -->
+    <!--        It is used here because there are many views that have to be-->
+    <!--        arranged in a specific way, also constraint layout includes-->
+    <!--        additional support for landscape and portrait modes-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

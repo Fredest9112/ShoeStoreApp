@@ -9,11 +9,19 @@
         <variable
             name="shoeDetailFragment"
             type="com.example.shoestore.view.ShoeDetailFragment" />
+        <variable
+            name="shoe"
+            type="com.example.shoestore.data.Shoe" />
     </data>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <!-- Constraint Layout -->
+        <!--        It is used here because there are many views that have to be-->
+        <!--        arranged in a specific way, also constraint layout includes-->
+        <!--        additional support for landscape and portrait modes-->
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -46,6 +54,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:fontFamily="@font/roboto"
+                    android:text="@={shoe.name}"
                     android:hint="@string/shoeNameHint"
                     android:inputType="text"
                     android:paddingStart="16dp">
@@ -68,6 +77,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:fontFamily="@font/roboto"
+                    android:text="@={shoe.size}"
                     android:hint="@string/shoeSizeHint"
                     android:inputType="number"
                     android:paddingStart="16dp">
@@ -91,6 +101,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:fontFamily="@font/roboto"
+                    android:text="@={shoe.company}"
                     android:hint="@string/shoeCompanyHint"
                     android:inputType="text"
                     android:paddingStart="16dp">
@@ -135,6 +146,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:fontFamily="@font/roboto"
+                    android:text="@={shoe.description}"
                     android:hint="@string/shoeDescHint"
                     android:inputType="text"
                     android:paddingStart="16dp">

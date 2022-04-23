@@ -16,6 +16,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- Constraint Layout -->
+<!--        It is used here due to the fact that it's simpler to setout -->
+<!--        the views in a way that works in portrait and landscape mode,-->
+<!--        since I don't know which screen an eventual user uses-->
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

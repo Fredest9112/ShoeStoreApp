@@ -11,6 +11,11 @@
             type="com.example.shoestore.view.ShoeListFragment" />
     </data>
 
+    <!-- Constraint Layout -->
+<!--    it is used here because it allows to arrange views according to-->
+<!--    what is going to be shown, as I said before, it includes support-->
+<!--    for portrait and landscape mode-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -48,6 +53,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/shoeListHint">
+
+            <!-- Linear Layout -->
+<!--            it is used here because the layout that comes inside is fit-->
+<!--            in a predictable way, additionally I wanted to control how the-->
+<!--            views are placed, which would be stacked vertically and linear layout-->
+<!--            gives that support-->
 
             <LinearLayout
                 android:id="@+id/shoeListLayout"
